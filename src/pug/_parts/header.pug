@@ -1,1 +1,39 @@
-header
+header.l-header
+  .l-container
+    nav.l-header__navigation
+      a.l-header__brand(href="#home")
+        span.l-header__brand--mark #
+        span.l-header__brand--name Robert Warren
+
+      .l-header__menu
+        ul.l-navigation__list
+          li.l-navigation__item
+            a.l-navigation_link.is-active(href="#home") Home
+          li.l-navigation__item
+            a.l-navigation_link(href="#about") About
+          li.l-navigation__item
+            a.l-navigation_link(href="#gallery") Gallery
+          li.l-navigation__item
+            a.l-navigation_link(href="#pricing_plan") Pricing Plan
+          li.l-navigation__item
+            a.l-navigation_link(href="#blog") Blog
+          li.l-navigation__item
+            a.l-navigation_link(href="#contact") Contact
+
+        a.c-button.c-button--primary(href="tel:+12025550120")
+          img.c-button__icon(src=path+"/img/common/header_icn_phone_call.svg" alt="+1-202-555-0120" width="24" height="24" loading="eager")
+          span.c-button__label +1-202-555-0120
+
+    .l-header__hero
+      h1.c-heading.c-heading--primary Hello, I’m Robert. I’m expert in to capture all the feelings.
+      .l-header__intro
+        p.c-text.c-text--description Nullam et ex lectus. Integer felis sapien, tempor maximus est in, commodo aliquam libero. Curabitur quam risus, consecur nec commodo nec, bibendum sed sapien.
+        .l-header__action
+          a(href="#").c-button.c-button--secondary
+            span View Gallery
+            img.c-button__icon(src=path+"/img/common/header_icn_arrow_right.svg" alt="View Gallery" width="24" height="24" loading="eager")
+          a(href="#").c-button.c-button--tertiary
+            img.c-button__icon(src=path+"/img/common/header_icn_chat_centered_dots.svg" alt="Get in touch" width="24" height="24" loading="eager")
+            span Get in touch
+
+

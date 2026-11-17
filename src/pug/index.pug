@@ -1,12 +1,137 @@
+//- extends ./_layouts/default
+//- block vars
+//-   -path = "."
+//-   -pageID = "top"
+//-   -pageTitle = "sample title"
+//-   -pageDescription = "sample description"
+//-   -pageKeywords = ""
+//-   -imgPC = path+"/img/top/"
+//-   -imgSP = path+"/img/top/sp/"
+//-   -imgCommonPC = path+"/img/common/"
+//-   -imgCommonSP = path+"/img/common/sp/"
+//- block container
+
+
 extends ./_layouts/default
 block vars
   -path = "."
   -pageID = "top"
-  -pageTitle = "sample title"
-  -pageDescription = "sample description"
+  -pageTitle = "Winston Potter | Professional Lawyer"
+  -pageDescription = "Winston Potter, Professional Lawyer"
   -pageKeywords = ""
   -imgPC = path+"/img/top/"
   -imgSP = path+"/img/top/sp/"
   -imgCommonPC = path+"/img/common/"
   -imgCommonSP = path+"/img/common/sp/"
+//- block container
+//-   section.l-hero
+//-     h1 WINSTON POTTER
+//-     p Professional Lawyer
+
+
 block container
+  .l-header__photography
+    ul.l-photography__list
+      li.l-photography__item
+        img.l-photography__item--above(src=path+"/img/top/header_picture_01.png" alt="Header Picture 01" width="312" height="424" loading="eager")
+      li.l-photography__item
+        img(src=path+"/img/top/header_picture_02.png" alt="Header Picture 02" width="312" height="424" loading="eager")
+      li.l-photography__item
+        img.l-photography__item--above(src=path+"/img/top/header_picture_03.png" alt="Header Picture 03" width="312" height="424" loading="eager")
+      li.l-photography__item
+        img(src=path+"/img/top/header_picture_04.png" alt="Header Picture 04" width="312" height="424" loading="eager")
+      li.l-photography__item
+        img.l-photography__item--above(src=path+"/img/top/header_picture_05.png" alt="Header Picture 05" width="312" height="424" loading="eager")
+      li.l-photography__item
+        img(src=path+"/img/top/header_picture_06.png" alt="Header Picture 06" width="312" height="424" loading="eager")
+
+  section#home.p-section-top-about
+    .l-container
+      .p-section-top-about__wrapper
+        .p-section-top-about__photo
+          ul.p-section-top-about__stats
+            li.p-section-top-about__portrait
+              strong 26+
+              span Years of experience
+              .c-divider
+            li.p-section-top-about__portrait
+              strong 98.5%
+              span Client Satisfaction
+              .c-divider
+            li.p-section-top-about__portrait
+              strong 2149+
+              span Beautiful Photo
+              .c-divider
+            li.p-section-top-about__portrait
+              strong 17+
+              span Awards
+
+          img(src=path+"/img/top/about_picture_robert_warren.png" alt="Robert Warren" width="648" height="464" loading="lazy")
+
+        .p-section-top-about__content
+          .p-section-top-about__span
+            span 📸 Photographer
+            span 📖 Writer
+            span ✈️ Traveler
+          h2.p-section-top-about__title My name is Robert Warren. I’m a professional photographer for almost 26+ years.
+          p.p-section-top-about__text Nullam ligula nulla, mollis sed leo sit amet, gravida faucibus ligula. Aliquam bibendum, sapien vel placerat euismod, sem eros congue neque, eget dapibus felis ligula ac nibh. In eget erat purus. Maecenas porta metus nec porttitor gravida. Fusce quis faucibus nisi, sit amet dictum ipsum. Nunc eu lorem at libero congue dictum nam et nunc tincidunt, mollis sapien.
+          .p-section-top-about__button
+            a(href="#").c-button.c-button--secondary
+              img.c-button__icon(src=path+"/img/common/header_icn_chat_centered_dots.svg" alt="Get in touch" width="24" height="24" loading="eager")
+              span Get in touch
+            ul.p-section-top-about_social-link
+              li.c-link.c-link--inline
+                img(src=path+"/img/top/about_icn_facebook.svg" alt="Facebook" width="16" height="16" loading="lazy")
+              li.c-link.c-link--inline
+                img(src=path+"/img/top/about_icn_twitter.svg" alt="Twitter" width="16" height="16" loading="lazy")
+              li.c-link.c-link--inline
+                img(src=path+"/img/top/about_icn_linked.svg" alt="Linked" width="16" height="16" loading="lazy")
+              li.c-link.c-link--inline
+                img(src=path+"/img/top/about_icn_instagram.svg", alt="Instagram", width="16", height="16", loading="lazy")
+              li.c-link.c-link--inline
+                img(src=path+"/img/top/about_icn_unsplash.svg", alt="Unsplash", width="16", height="16", loading="lazy")
+
+  section.p-section-top-gallery
+    .l-container
+      .p-section-top-gallery__body
+        .p-section-top-gallery__heading
+          .p-section-top-gallery__title
+            h2 My Gallery
+            p Nullam ligula nulla, mollis sed leo sit amet, gravida faucibus ligula. Aliquam bibendum, sapien vel placerat.
+          a.c-button.c-button--quaternary(href="#")
+            span.c-button__label View more
+            img.c-button__icon(src=path+"/img/top/gallery_icn_arrow_right.svg" alt="+1-202-555-0120" width="24" height="24" loading="lazy")
+
+        .p-section-top-gallery__photo
+          figure.p-section-top-gallery__left
+            img(src=path+"/img/top/gallery_photo_left_01.png" alt="Gallery Photo Left 01" width="424" height="312" loading="lazy")
+            img(src=path+"/img/top/gallery_photo_left_02.png" alt="Gallery Photo Left 02" width="424" height="312" loading="lazy")
+            img(src=path+"/img/top/gallery_photo_left_03.png" alt="Gallery Photo Left 03" width="424" height="312" loading="lazy")
+          figure.p-section-top-gallery__center
+            img(src=path+"/img/top/gallery_photo_center_01.png" alt="Gallery Photo Center 01" width="536" height="480" loading="lazy")
+            img(src=path+"/img/top/gallery_photo_center_02.png" alt="Gallery Photo Center 02" width="536" height="480" loading="lazy")
+          figure.p-section-top-gallery__right
+            img(src=path+"/img/top/gallery_photo_right_01.png" alt="Gallery Photo Right 01" width="312" height="228" loading="lazy")
+            img(src=path+"/img/top/gallery_photo_right_02.png" alt="Gallery Photo Right 02" width="312" height="228" loading="lazy")
+            img(src=path+"/img/top/gallery_photo_right_03.png" alt="Gallery Photo Right 03" width="312" height="228" loading="lazy")
+            img(src=path+"/img/top/gallery_photo_right_04.png" alt="Gallery Photo Right 04" width="312" height="228" loading="lazy")
+
+  section.p-section-top-post
+    .l-container
+      .p-section-top-post__body
+        h2.p-section-top-post__title Latest instagram post
+        .p-section-top-post__photo
+          img(src=path+"/img/top/gallary_photo_right_01.png" alt="Gallary Photo Right 01" width="200" height="200" loading="lazy")
+          img(src=path+"/img/top/gallary_photo_right_01.png" alt="Gallary Photo Right 01" width="200" height="200" loading="lazy")
+          img(src=path+"/img/top/gallary_photo_right_01.png" alt="Gallary Photo Right 01" width="200" height="200" loading="lazy")
+          img(src=path+"/img/top/gallary_photo_right_01.png" alt="Gallary Photo Right 01" width="200" height="200" loading="lazy")
+          img(src=path+"/img/top/gallary_photo_right_01.png" alt="Gallary Photo Right 01" width="200" height="200" loading="lazy")
+          img(src=path+"/img/top/gallary_photo_right_01.png" alt="Gallary Photo Right 01" width="200" height="200" loading="lazy")
+
+
+
+
+
+
+
+

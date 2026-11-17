@@ -2,3 +2,160 @@
 @use "_base/base" as *;
 @use "_parts/header";
 @use "_parts/footer";
+
+.p-section-top-about {
+  padding: $spacing-3xl $spacing-section;
+}
+
+.p-section-top-about__wrapper {
+  display: flex;
+  align-items: center;
+  gap: 136px;
+}
+
+.p-section-top-about__photo {
+  position: relative;
+  width: 6.48rem;
+  height: 4.64rem;
+
+  > img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.p-section-top-about__stats {
+  position: absolute;
+  z-index: 1;
+  top: 0.36rem;
+  left: 0.36rem;
+  display: grid;
+  gap: 0.2rem;
+  padding: $spacing-lg;
+  background-color: $color-white;
+  width: 196px;
+  margin: 0;
+  list-style: none;
+}
+
+.p-section-top-about__portrait {
+  display: grid;
+  gap: 0.04rem;
+
+  strong {
+    font-size: $font-size-xl;
+    line-height: $spacing-2xl;
+    font-weight: 600;
+  }
+
+  span {
+    font-size: $font-size-sm;
+    line-height: 0.2rem;
+    font-weight: 400;
+  }
+
+  .c-divider {
+    display: block;
+    width: 100%;
+    height: 1px;
+    margin-top: 0.15rem;
+    background-color: $color-divider;
+  }
+}
+
+.p-section-top-about__content {
+  display: grid;
+  gap: $spacing-lg;
+  width: 480px;
+
+  h2 {
+    font-size: 0.36rem;
+    line-height: 0.44rem;
+    font-weight: 400;
+    margin: 0;
+  }
+
+  p {
+    font-size: $font-size-base;
+    line-height: $spacing-lg;
+    font-weight: 400;
+    color: $color-text-muted;
+    margin: 0;
+  }
+}
+
+.p-section-top-about__span {
+  display: flex;
+  gap: $spacing-md;
+
+  span {
+    font-size: $font-size-base;
+    line-height: $spacing-lg;
+    font-weight: 500;
+    color: $color-heading;
+  }
+}
+
+.p-section-top-about__button {
+  display: flex;
+  gap: $spacing-lg;
+}
+
+.p-section-top-about_social-link {
+  display: flex;
+  gap: 0.08rem;
+  margin: 0;
+
+  li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    width: 0.48rem;
+    height: 0.48rem;
+    border-radius: $spacing-section;
+    border: 2px solid $color-surface;
+  }
+}
+
+.p-section-top-gallery {
+  padding: $spacing-section;
+}
+
+.p-section-top-gallery__heading {
+  display: flex;
+  gap: 574px;
+}
+
+.p-section-top-gallery__title {
+  display: grid;
+  gap: 0.2rem;
+
+  h2 {
+    font-size: 36px;
+    line-height: 44px;
+    font-weight: 400;
+    margin: 0;
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    width: 424px;
+  }
+}
+
+.p-section-top-gallery__photo {
+  display: flex;
+  gap: 24px;
+
+  .p-section-top-gallery__left,
+  .p-section-top-gallery__center,
+  .p-section-top-gallery__right {
+    display: grid;
+    gap: 24px;
+  }
+}

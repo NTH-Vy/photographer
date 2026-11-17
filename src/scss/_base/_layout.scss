@@ -82,6 +82,11 @@ svg {
   object-fit: cover;
 }
 
+.l-container {
+  width: 1320px;
+  margin: 0 auto;
+}
+
 .container {
   @include desktop {
     min-width: $viewport-width;

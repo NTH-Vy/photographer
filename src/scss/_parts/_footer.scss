@@ -1,2 +1,69 @@
 @charset "utf-8";
-@use "../_base/base" as *;
+@use "../_base/variables" as *;
+
+.l-footer {
+  background-color: $color-gray;
+  position: relative;
+  color: $color-white;
+  height: 1.28rem;
+  padding: 0.4rem;
+
+  .l-container {
+    width: 1320px;
+    margin: 0 auto;
+  }
+}
+
+.l-footer__navigation {
+  display: flex;
+  gap: 2.69rem;
+}
+
+.l-footer__brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: $color-heading;
+  font-size: $font-size-xl;
+  line-height: $spacing-lg;
+  font-weight: 600;
+  text-decoration: none;
+
+  &--mark {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    width: 48px;
+    height: 48px;
+    border: 2px solid $color-brand;
+    border-radius: 50%;
+    color: $color-brand;
+  }
+}
+
+.l-navigation__list {
+  display: flex;
+  gap: $spacing-lg;
+}
+
+.l-navigation_link {
+  color: $color-text-muted;
+  font-size: $font-size-base;
+  line-height: $spacing-lg;
+  font-weight: 400;
+  text-decoration: none;
+
+  &:hover,
+  &.is-active {
+    color: $color-heading;
+    font-weight: 500;
+  }
+}
+
+.l-footer__copyright {
+  font-size: $font-size-sm;
+  line-height: 0.2rem;
+  font-weight: 400;
+  color: $color-heading;
+}

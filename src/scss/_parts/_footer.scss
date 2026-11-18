@@ -42,12 +42,12 @@
   }
 }
 
-.l-navigation__list {
+.l-navigation__list-footer {
   display: flex;
   gap: $spacing-lg;
 }
 
-.l-navigation_link {
+.l-navigation_link-footer {
   color: $color-text-muted;
   font-size: $font-size-base;
   line-height: $spacing-lg;
@@ -66,4 +66,5 @@
   line-height: 0.2rem;
   font-weight: 400;
   color: $color-heading;
+  align-content: center;
 }

@@ -23,21 +23,23 @@
         <div class="l-container">
           <nav class="l-header__navigation"><a class="l-header__brand" href="#home"><span class="l-header__brand--mark">#</span><span class="l-header__brand--name">Robert Warren</span></a>
             <div class="l-header__menu">
-              <ul class="l-navigation__list">
-                <li class="l-navigation__item"><a class="l-navigation_link is-active" href="#home">Home</a></li>
-                <li class="l-navigation__item"><a class="l-navigation_link" href="#about">About</a></li>
-                <li class="l-navigation__item"><a class="l-navigation_link" href="#gallery">Gallery</a></li>
-                <li class="l-navigation__item"><a class="l-navigation_link" href="#pricing_plan">Pricing Plan</a></li>
-                <li class="l-navigation__item"><a class="l-navigation_link" href="#blog">Blog</a></li>
-                <li class="l-navigation__item"><a class="l-navigation_link" href="#contact">Contact</a></li>
-              </ul><a class="c-button c-button--primary" href="tel:+12025550120"><img class="c-button__icon" src="./img/common/header_icn_phone_call.svg" alt="+1-202-555-0120" width="24" height="24" loading="eager"><span class="c-button__label">+1-202-555-0120</span></a>
+              <nav class="l-global-nav">
+                <ul class="l-global-nav__list">
+                  <li class="l-global-nav__item"><a class="l-global-nav__link is-active" href="#home">Home</a></li>
+                  <li class="l-global-nav__item"><a class="l-global-nav__link" href="#about">About</a></li>
+                  <li class="l-global-nav__item"><a class="l-global-nav__link" href="#gallery">Gallery</a></li>
+                  <li class="l-global-nav__item"><a class="l-global-nav__link" href="#pricing_plan">Pricing Plan</a></li>
+                  <li class="l-global-nav__item"><a class="l-global-nav__link" href="#blog">Blog</a></li>
+                  <li class="l-global-nav__item"><a class="l-global-nav__link" href="#contact">Contact</a></li>
+                </ul>
+              </nav><a class="c-button c-button--primary" href="tel:+12025550120"><img class="c-button__icon" src="./img/common/header_icn_phone_call.svg" alt="+1-202-555-0120" width="24" height="24" loading="eager"><span class="c-button__label">+1-202-555-0120</span></a>
             </div>
           </nav>
           <div class="l-header__hero">
             <h1 class="c-heading c-heading--primary">Hello, I’m Robert. I’m expert in to capture all the feelings.</h1>
             <div class="l-header__intro">
               <p class="c-text c-text--description">Nullam et ex lectus. Integer felis sapien, tempor maximus est in, commodo aliquam libero. Curabitur quam risus, consecur nec commodo nec, bibendum sed sapien.</p>
-              <div class="l-header__action"><a class="c-button c-button--secondary" href="#"><span>View Gallery</span><img class="c-button__icon" src="./img/common/header_icn_arrow_right.svg" alt="View Gallery" width="24" height="24" loading="eager"></a><a class="c-button c-button--tertiary" href="#"><img class="c-button__icon" src="./img/common/header_icn_chat_centered_dots.svg" alt="Get in touch" width="24" height="24" loading="eager"><span>Get in touch</span></a></div>
+              <div class="l-header__action"><a class="c-button c-button--secondary" href="#"><span class="c-button__label">View Gallery</span><img class="c-button__icon" src="./img/common/header_icn_arrow_right.svg" alt="View Gallery" width="24" height="24" loading="eager"></a><a class="c-button c-button--tertiary" href="#"><img class="c-button__icon" src="./img/common/header_icn_chat_centered_dots.svg" alt="Get in touch" width="24" height="24" loading="eager"><span class="c-button__label">Get in touch</span></a></div>
             </div>
           </div>
         </div>
@@ -53,46 +55,52 @@
             <li class="l-photography__item"><img src="./img/top/header_picture_06.png" alt="Header Picture 06" width="312" height="424" loading="eager"></li>
           </ul>
         </div>
+        <!-- ============================================================-->
+        <!-- Section: About-->
+        <!-- ============================================================-->
         <section class="p-section-top-about" id="home">
           <div class="l-container">
             <div class="p-section-top-about__wrapper">
               <div class="p-section-top-about__photo">
                 <ul class="p-section-top-about__stats">
-                  <li class="p-section-top-about__portrait"><strong>26+</strong><span>Years of experience</span>
-                    <div class="c-divider"></div>
+                  <li class="c-stat"><strong class="c-stat__value">26+</strong><span class="c-stat__label">Years of experience</span>
+                    <div class="c-divider c-divider--spaced"></div>
                   </li>
-                  <li class="p-section-top-about__portrait"><strong>98.5%</strong><span>Client Satisfaction</span>
-                    <div class="c-divider"></div>
+                  <li class="c-stat"><strong class="c-stat__value">98.5%</strong><span class="c-stat__label">Client Satisfaction</span>
+                    <div class="c-divider c-divider--spaced"></div>
                   </li>
-                  <li class="p-section-top-about__portrait"><strong>2149+</strong><span>Beautiful Photo</span>
-                    <div class="c-divider"></div>
+                  <li class="c-stat"><strong class="c-stat__value">2149+</strong><span class="c-stat__label">Beautiful Photo</span>
+                    <div class="c-divider c-divider--spaced"></div>
                   </li>
-                  <li class="p-section-top-about__portrait"><strong>17+</strong><span>Awards</span></li>
+                  <li class="c-stat"><strong class="c-stat__value">17+</strong><span class="c-stat__label">Awards</span></li>
                 </ul><img src="./img/top/about_picture_robert_warren.png" alt="Robert Warren" width="648" height="464" loading="lazy">
               </div>
               <div class="p-section-top-about__content">
                 <div class="p-section-top-about__span"><span>📸 Photographer</span><span>📖 Writer</span><span>✈️ Traveler</span></div>
-                <h2 class="p-section-top-about__title">My name is Robert Warren. I’m a professional photographer for almost 26+ years.</h2>
+                <h2 class="p-section-top-about__title c-heading c-heading--primary">My name is Robert Warren. I’m a professional photographer for almost 26+ years.</h2>
                 <p class="p-section-top-about__text">Nullam ligula nulla, mollis sed leo sit amet, gravida faucibus ligula. Aliquam bibendum, sapien vel placerat euismod, sem eros congue neque, eget dapibus felis ligula ac nibh. In eget erat purus. Maecenas porta metus nec porttitor gravida. Fusce quis faucibus nisi, sit amet dictum ipsum. Nunc eu lorem at libero congue dictum nam et nunc tincidunt, mollis sapien.</p>
-                <div class="p-section-top-about__button"><a class="c-button c-button--secondary" href="#"><img class="c-button__icon" src="./img/common/header_icn_chat_centered_dots.svg" alt="Get in touch" width="24" height="24" loading="eager"><span>Get in touch</span></a>
-                  <ul class="p-section-top-about_social-link">
-                    <li class="c-link c-link--inline"><img src="./img/top/about_icn_facebook.svg" alt="Facebook" width="16" height="16" loading="lazy"></li>
-                    <li class="c-link c-link--inline"><img src="./img/top/about_icn_twitter.svg" alt="Twitter" width="16" height="16" loading="lazy"></li>
-                    <li class="c-link c-link--inline"><img src="./img/top/about_icn_linked.svg" alt="Linked" width="16" height="16" loading="lazy"></li>
-                    <li class="c-link c-link--inline"><img src="./img/top/about_icn_instagram.svg" alt="Instagram" width="16" height="16" loading="lazy"></li>
-                    <li class="c-link c-link--inline"><img src="./img/top/about_icn_unsplash.svg" alt="Unsplash" width="16" height="16" loading="lazy"></li>
+                <div class="p-section-top-about__button"><a class="c-button c-button--secondary" href="#"><img class="c-button__icon" src="./img/common/header_icn_chat_centered_dots.svg" alt="Get in touch" width="24" height="24" loading="eager"><span class="c-button__label">Get in touch</span></a>
+                  <ul class="p-section-top-about__social-link">
+                    <li><a class="c-link c-link--inline" href="#" aria-label="Facebook"><img src="./img/top/about_icn_facebook.svg" alt="Facebook" width="16" height="16" loading="lazy"></a></li>
+                    <li><a class="c-link c-link--inline" href="#" aria-label="Twitter"><img src="./img/top/about_icn_twitter.svg" alt="Twitter" width="16" height="16" loading="lazy"></a></li>
+                    <li><a class="c-link c-link--inline" href="#" aria-label="Linked"><img src="./img/top/about_icn_linked.svg" alt="Linked" width="16" height="16" loading="lazy"></a></li>
+                    <li><a class="c-link c-link--inline" href="#" aria-label="Instagram"><img src="./img/top/about_icn_instagram.svg" alt="Instagram" width="16" height="16" loading="lazy"></a></li>
+                    <li><a class="c-link c-link--inline" href="#" aria-label="Unsplash"><img src="./img/top/about_icn_unsplash.svg" alt="Unsplash" width="16" height="16" loading="lazy"></a></li>
                   </ul>
                 </div>
               </div>
             </div>
           </div>
         </section>
-        <section class="p-section-top-gallery">
+        <!-- ============================================================-->
+        <!-- Section: Gallery-->
+        <!-- ============================================================-->
+        <section class="p-section-top-gallery" id="gallery">
           <div class="l-container">
             <div class="p-section-top-gallery__body">
               <div class="p-section-top-gallery__heading">
                 <div class="p-section-top-gallery__title">
-                  <h2>My Gallery</h2>
+                  <h2 class="c-heading c-heading--primary">My Gallery</h2>
                   <p>Nullam ligula nulla, mollis sed leo sit amet, gravida faucibus ligula. Aliquam bibendum, sapien vel placerat.</p>
                 </div><a class="c-button c-button--quaternary" href="#"><span class="c-button__label">View more</span><img class="c-button__icon" src="./img/top/gallery_icn_arrow_right.svg" alt="View more" width="24" height="24" loading="lazy"></a>
               </div>
@@ -104,10 +112,13 @@
             </div>
           </div>
         </section>
-        <section class="p-section-top-service">
+        <!-- ============================================================-->
+        <!-- Section: Service-->
+        <!-- ============================================================-->
+        <section class="p-section-top-service" id="service">
           <div class="l-container">
             <div class="p-section-top-service__heading">
-              <h2>My Services</h2>
+              <h2 class="c-heading c-heading--primary">My Services</h2>
               <p>Nullam ligula nulla, mollis sed leo sit amet, gravida faucibus ligula. Aliquam bibendum, sapien vel placerat.</p>
             </div>
             <div class="p-section-top-service__body">
@@ -135,77 +146,115 @@
             </div>
           </div>
         </section>
-        <section class="p-section-top-pricing-plan">
+        <!-- ============================================================-->
+        <!-- Section: Pricing Plan-->
+        <!-- ============================================================-->
+        <section class="p-section-top-pricing-plan" id="pricing_plan">
           <div class="l-container">
             <div class="p-section-top-pricing-plan__body">
-              <h2 class="p-section-top-pricing-plan__title">Pricing Plans</h2>
+              <h2 class="p-section-top-pricing-plan__title c-heading c-heading--primary">Pricing Plans</h2>
               <div class="p-section-top-pricing-plan__card">
-                <div class="pricing-card">
-                  <div class="pricing-card__header"><strong class="pricing-card__price">$625</strong>
-                    <h3 class="pricing-card__title">Standard</h3>
-                    <p class="pricing-card__subtitle">In mi ex, rutrum sed dui et, dignissim tempor leo. Maecenas vulputate, arcu eget condin.</p>
+                <article class="c-card c-card--pricing">
+                  <div class="c-card__header"><strong class="c-card__price">$625</strong>
+                    <h3 class="c-card__title">Standard</h3>
+                    <p class="c-card__subtitle">In mi ex, rutrum sed dui et, dignissim tempor leo. Maecenas vulputate, arcu eget condin.</p>
                   </div>
-                  <hr class="pricing-card__divider">
-                  <ul class="pricing-card__features">
-                    <li class="pricing-card__feature-item">2 Hours</li>
-                    <li class="pricing-card__feature-item">1 Photographer</li>
-                    <li class="pricing-card__feature-item pricing-card__feature-item--disabled">Special Photo Edits</li>
-                    <li class="pricing-card__feature-item pricing-card__feature-item--disabled">Wedding, Events &amp; Festivals</li>
-                    <li class="pricing-card__feature-item pricing-card__feature-item--disabled">Engagement Shoot</li>
-                    <li class="pricing-card__feature-item pricing-card__feature-item--disabled">Ceremony Video</li>
-                  </ul><a class="pricing-card__button button-common" href="#"><span class="button-common__text">Let’s Work Together</span><img class="button-common__icon" src="./img/top/gallery_icn_arrow_right.svg" alt="Let’s Work Together" width="24" height="24" loading="lazy"></a>
-                </div>
-                <div class="pricing-card">
-                  <div class="pricing-card__header"><strong class="pricing-card__price">$1,600</strong>
-                    <h3 class="pricing-card__title">Premium</h3>
-                    <p class="pricing-card__subtitle">In mi ex, rutrum sed dui et, dignissim tempor leo. Maecenas vulputate, arcu eget condin.</p>
+                  <hr class="c-card__divider">
+                  <ul class="c-card__features">
+                    <li class="c-card__feature-item">2 Hours</li>
+                    <li class="c-card__feature-item">1 Photographer</li>
+                    <li class="c-card__feature-item c-card__feature-item--disabled">Special Photo Edits</li>
+                    <li class="c-card__feature-item c-card__feature-item--disabled">Wedding, Events &amp; Festivals</li>
+                    <li class="c-card__feature-item c-card__feature-item--disabled">Engagement Shoot</li>
+                    <li class="c-card__feature-item c-card__feature-item--disabled">Ceremony Video</li>
+                  </ul><a class="c-button c-button--quaternary c-button--full" href="#"><span class="c-button__label">Let’s Work Together</span><img class="c-button__icon" src="./img/top/gallery_icn_arrow_right.svg" alt="Let’s Work Together" width="24" height="24" loading="lazy"></a>
+                </article>
+                <article class="c-card c-card--pricing">
+                  <div class="c-card__header"><strong class="c-card__price">$1,600</strong>
+                    <h3 class="c-card__title">Premium</h3>
+                    <p class="c-card__subtitle">In mi ex, rutrum sed dui et, dignissim tempor leo. Maecenas vulputate, arcu eget condin.</p>
                   </div>
-                  <hr class="pricing-card__divider">
-                  <ul class="pricing-card__features">
-                    <li class="pricing-card__feature-item">4 Hours</li>
-                    <li class="pricing-card__feature-item">1 Photographer</li>
-                    <li class="pricing-card__feature-item">Special Photo Edits</li>
-                    <li class="pricing-card__feature-item">Wedding, Events &amp; Festivals</li>
-                    <li class="pricing-card__feature-item pricing-card__feature-item--disabled">Engagement Shoot</li>
-                    <li class="pricing-card__feature-item pricing-card__feature-item--disabled">Ceremony Video</li>
-                  </ul><a class="pricing-card__button button-common" href="#"><span class="button-common__text">Let’s Work Together</span><img class="button-common__icon" src="./img/top/gallery_icn_arrow_right.svg" alt="Let’s Work Together" width="24" height="24" loading="lazy"></a>
-                </div>
-                <div class="pricing-card">
-                  <div class="pricing-card__header"><strong class="pricing-card__price">$3,650</strong>
-                    <h3 class="pricing-card__title">Business</h3>
-                    <p class="pricing-card__subtitle">In mi ex, rutrum sed dui et, dignissim tempor leo. Maecenas vulputate, arcu eget condin.</p>
+                  <hr class="c-card__divider">
+                  <ul class="c-card__features">
+                    <li class="c-card__feature-item">4 Hours</li>
+                    <li class="c-card__feature-item">1 Photographer</li>
+                    <li class="c-card__feature-item">Special Photo Edits</li>
+                    <li class="c-card__feature-item">Wedding, Events &amp; Festivals</li>
+                    <li class="c-card__feature-item c-card__feature-item--disabled">Engagement Shoot</li>
+                    <li class="c-card__feature-item c-card__feature-item--disabled">Ceremony Video</li>
+                  </ul><a class="c-button c-button--quaternary c-button--full" href="#"><span class="c-button__label">Let’s Work Together</span><img class="c-button__icon" src="./img/top/gallery_icn_arrow_right.svg" alt="Let’s Work Together" width="24" height="24" loading="lazy"></a>
+                </article>
+                <article class="c-card c-card--pricing">
+                  <div class="c-card__header"><strong class="c-card__price">$3,650</strong>
+                    <h3 class="c-card__title">Business</h3>
+                    <p class="c-card__subtitle">In mi ex, rutrum sed dui et, dignissim tempor leo. Maecenas vulputate, arcu eget condin.</p>
                   </div>
-                  <hr class="pricing-card__divider">
-                  <ul class="pricing-card__features">
-                    <li class="pricing-card__feature-item">6+ Hours</li>
-                    <li class="pricing-card__feature-item">2 Photographer</li>
-                    <li class="pricing-card__feature-item">Special Photo Edits</li>
-                    <li class="pricing-card__feature-item">Wedding, Events &amp; Festivals</li>
-                    <li class="pricing-card__feature-item">Engagement Shoot</li>
-                    <li class="pricing-card__feature-item">Ceremony Video</li>
-                  </ul><a class="pricing-card__button button-common" href="#"><span class="button-common__text">Let’s Work Together</span><img class="button-common__icon" src="./img/top/gallery_icn_arrow_right.svg" alt="Let’s Work Together" width="24" height="24" loading="lazy"></a>
-                </div>
+                  <hr class="c-card__divider">
+                  <ul class="c-card__features">
+                    <li class="c-card__feature-item">6+ Hours</li>
+                    <li class="c-card__feature-item">2 Photographer</li>
+                    <li class="c-card__feature-item">Special Photo Edits</li>
+                    <li class="c-card__feature-item">Wedding, Events &amp; Festivals</li>
+                    <li class="c-card__feature-item">Engagement Shoot</li>
+                    <li class="c-card__feature-item">Ceremony Video</li>
+                  </ul><a class="c-button c-button--quaternary c-button--full" href="#"><span class="c-button__label">Let’s Work Together</span><img class="c-button__icon" src="./img/top/gallery_icn_arrow_right.svg" alt="Let’s Work Together" width="24" height="24" loading="lazy"></a>
+                </article>
               </div>
             </div>
           </div>
         </section>
-        <section class="p-section-top-news">
+        <!-- ============================================================-->
+        <!-- Section: News-->
+        <!-- ============================================================-->
+        <section class="p-section-top-news" id="blog">
           <div class="l-container">
-            <div class="p-section-top-post__body">
-              <h2 class="p-section-top-post__title">Blog & News</h2>
-              <div class="p-section-top-news__photo"><img src="./img/top/news_picture_01.png" alt="News Picture 01" width="424" height="424" loading="lazy"><img src="./img/top/news_picture_02.png" alt="News Picture 02" width="424" height="424" loading="lazy"><img src="./img/top/news_picture_03.png" alt="News Picture 03" width="424" height="424" loading="lazy"></div>
+            <div class="p-section-top-news__body">
+              <h2 class="p-section-top-news__title c-heading c-heading--primary">Blog &amp; News</h2>
+              <ul class="c-media">
+                <li class="c-media__item"><img src="./img/top/news_picture_01.png" alt="News Picture 01" width="424" height="424" loading="lazy">
+                  <div class="p-section-top-news__overlay">
+                    <div class="p-section-top-news__overlay--span"><span>22 Oct, 2020</span><span>/</span><span>246 Comments</span></div>
+                    <h3 class="p-section-top-news__overlay--title">Duis magna risus, convallis vel purus eu, sollicitudin volutpat vel.</h3>
+                  </div>
+                </li>
+                <li class="c-media__item"><img src="./img/top/news_picture_02.png" alt="News Picture 02" width="424" height="424" loading="lazy">
+                  <div class="p-section-top-news__overlay">
+                    <div class="p-section-top-news__overlay--span"><span>22 Oct, 2020</span><span>/</span><span>246 Comments</span></div>
+                    <h3 class="p-section-top-news__overlay--title">Duis magna risus, convallis vel purus eu, sollicitudin volutpat vel.</h3>
+                  </div>
+                </li>
+                <li class="c-media__item"><img src="./img/top/news_picture_03.png" alt="News Picture 03" width="424" height="424" loading="lazy">
+                  <div class="p-section-top-news__overlay">
+                    <div class="p-section-top-news__overlay--span"><span>22 Oct, 2020</span><span>/</span><span>246 Comments</span></div>
+                    <h3 class="p-section-top-news__overlay--title">Duis magna risus, convallis vel purus eu, sollicitudin volutpat vel.</h3>
+                  </div>
+                </li>
+              </ul>
             </div>
           </div>
         </section>
+        <!-- ============================================================-->
+        <!-- Section: Latest Instagram Post-->
+        <!-- ============================================================-->
         <section class="p-section-top-post">
           <div class="l-container">
             <div class="p-section-top-post__body">
-              <h2 class="p-section-top-post__title">Latest instagram post</h2>
-              <div class="p-section-top-post__photo"><img src="./img/top/post_picture_01.png" alt="Post Picture 01" width="200" height="200" loading="lazy"><img src="./img/top/post_picture_02.png" alt="Post Picture 02" width="200" height="200" loading="lazy"><img src="./img/top/post_picture_03.png" alt="Post Picture 03" width="200" height="200" loading="lazy"><img src="./img/top/post_picture_04.png" alt="Post Picture 04" width="200" height="200" loading="lazy"><img src="./img/top/post_picture_05.png" alt="Post Picture 05" width="200" height="200" loading="lazy"><img src="./img/top/post_picture_06.png" alt="Post Picture 06" width="200" height="200" loading="lazy"></div>
+              <h2 class="p-section-top-post__title c-heading c-heading--primary">Latest instagram post</h2>
+              <ul class="c-media">
+                <li class="c-media__item"><img src="./img/top/post_picture_01.png" alt="Post Picture 01" width="200" height="200" loading="lazy"></li>
+                <li class="c-media__item"><img src="./img/top/post_picture_02.png" alt="Post Picture 02" width="200" height="200" loading="lazy"></li>
+                <li class="c-media__item"><img src="./img/top/post_picture_03.png" alt="Post Picture 03" width="200" height="200" loading="lazy"></li>
+                <li class="c-media__item"><img src="./img/top/post_picture_04.png" alt="Post Picture 04" width="200" height="200" loading="lazy"></li>
+                <li class="c-media__item"><img src="./img/top/post_picture_05.png" alt="Post Picture 05" width="200" height="200" loading="lazy"></li>
+                <li class="c-media__item"><img src="./img/top/post_picture_06.png" alt="Post Picture 06" width="200" height="200" loading="lazy"></li>
+              </ul>
             </div>
           </div>
         </section>
-        <section class="p-section-top-contact">
+        <!-- ============================================================-->
+        <!-- Section: Contact-->
+        <!-- ============================================================-->
+        <section class="p-section-top-contact" id="contact">
           <div class="l-container">
             <div class="p-section-top-contact__body">
               <div class="p-section-top-contact__information">
@@ -215,14 +264,59 @@
                 </div>
                 <ul class="p-section-top-contact__detail">
                   <li class="p-section-top-contact__item">
-                    <figure class="p-section-top-contact__icon"><img src="./img/top/contact_icn_phone_call.svg" alt="Call me now" width="24" height="24" loading="lazy"></figure>
+                    <figure class="p-section-top-contact__icon"><img src="./img/top/contact_icn_phone_call.svg" alt="" width="24" height="24" loading="lazy"></figure>
                     <div class="p-section-top-contact__content"><span class="p-section-top-contact__label">Call me now</span><a class="p-section-top-contact__value" href="tel:+12025550190">+1-202-555-0190</a></div>
                   </li>
                   <li class="p-section-top-contact__item">
-                    <figure class="p-section-top-contact__icon"><img src="./img/top/contact_icn_envelope.svg" alt="Chat with me" width="24" height="24" loading="lazy"></figure>
+                    <figure class="p-section-top-contact__icon"><img src="./img/top/contact_icn_envelope.svg" alt="" width="24" height="24" loading="lazy"></figure>
                     <div class="p-section-top-contact__content"><span class="p-section-top-contact__label">Chat with me</span><a class="p-section-top-contact__value" href="mailto:kevin.gilbert@gmail.com">kevin.gilbert@gmail.com</a></div>
                   </li>
                 </ul>
+                <div class="p-section-top-contact__social">
+                  <p class="p-section-top-contact__social-title"></p>
+                  <div class="p-section-top-contact__social-list"><span class="p-section-top-contact__social-line"></span>
+                    <ul class="p-section-top-contact__social-items">
+                      <li><a class="c-link c-link--inline" href="#" aria-label="Facebook"><img src="./img/top/about_icn_facebook.svg" alt="Facebook" width="16" height="16" loading="lazy"></a></li>
+                      <li><a class="c-link c-link--inline" href="#" aria-label="Twitter"><img src="./img/top/about_icn_twitter.svg" alt="Twitter" width="16" height="16" loading="lazy"></a></li>
+                      <li><a class="c-link c-link--inline is-active" href="#" aria-label="LinkedIn"><img src="./img/top/about_icn_linked.svg" alt="Linked" width="16" height="16" loading="lazy"></a></li>
+                      <li><a class="c-link c-link--inline" href="#" aria-label="Instagram"><img src="./img/top/about_icn_instagram.svg" alt="Instagram" width="16" height="16" loading="lazy"></a></li>
+                      <li><a class="c-link c-link--inline" href="#" aria-label="Unsplash"><img src="./img/top/about_icn_unsplash.svg" alt="Unsplash" width="16" height="16" loading="lazy"></a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="p-section-top-contact__divider"></div>
+              <div class="p-section-top-contact__form-wrap">
+                <h3 class="p-section-top-contact__form-title">Just say<img src="./img/top/contact_icn_hi.svg" alt="Just say Hi" width="24" height="24"> Hi</h3>
+                <form class="p-section-top-contact__form" action="#" method="post">
+                  <div class="p-section-top-contact__form-row">
+                    <div class="p-section-top-contact__field">
+                      <input class="p-section-top-contact__input" type="text" name="name" placeholder="Full Name" required>
+                    </div>
+                    <div class="p-section-top-contact__field">
+                      <input class="p-section-top-contact__input" type="email" name="email" placeholder="Email Adress" required>
+                    </div>
+                  </div>
+                  <div class="p-section-top-contact__field">
+                    <input class="p-section-top-contact__input" type="text" name="subject" placeholder="Subject">
+                  </div>
+                  <div class="p-section-top-contact__form-row">
+                    <div class="p-section-top-contact__field is-select">
+                      <select class="p-section-top-contact__select" name="plan">
+                        <option value="" disabled selected>Pricing Plans</option>
+                        <option value="basic">Basic Plan</option>
+                        <option value="pro">Pro Plan</option>
+                      </select><span class="p-section-top-contact__field-icon"><img src="./img/top/contact_icn_caret_down.svg" alt="Plan" width="16" height="16"></span>
+                    </div>
+                    <div class="p-section-top-contact__field is-date">
+                      <input class="p-section-top-contact__input" type="text" name="date" placeholder="Date" onfocus="(this.type='date')" onblur="(this.type='text')"><span class="p-section-top-contact__field-icon"><img src="./img/top/contact_calendar_blank.svg" alt="Date" width="24" height="24"></span>
+                    </div>
+                  </div>
+                  <div class="p-section-top-contact__field">
+                    <textarea class="p-section-top-contact__textarea" name="message" rows="5" placeholder="Message"></textarea>
+                  </div>
+                  <button class="p-section-top-contact__submit" type="submit"><span>Send Message</span><img src="./img/top/contact_icn_paper_plane_right.svg" alt="Send Message" width="24" height="24"></button>
+                </form>
               </div>
             </div>
           </div>
@@ -232,12 +326,12 @@
         <div class="l-container">
           <nav class="l-footer__navigation"><a href="#home">
               <div class="l-footer__brand"><span class="l-footer__brand--mark">#</span><span class="l-footer__brand--name">Robert Warren</span></div></a>
-            <ul class="l-navigation__list-footer">
-              <li class="l-navigation__item-footer"><a class="l-navigation_link-footer is-active" href="#home">Home</a></li>
-              <li class="l-navigation__item-footer"><a class="l-navigation_link-footer" href="#about">About</a></li>
-              <li class="l-navigation__item-footer"><a class="l-navigation_link-footer" href="#service">Services</a></li>
-              <li class="l-navigation__item-footer"><a class="l-navigation_link-footer" href="#gallery">Gallery</a></li>
-              <li class="l-navigation__item-footer"><a class="l-navigation_link-footer" href="#contact">Contact</a></li>
+            <ul class="l-footer__nav-list">
+              <li class="l-footer__nav-item"><a class="l-footer__nav-link is-active" href="#home">Home</a></li>
+              <li class="l-footer__nav-item"><a class="l-footer__nav-link" href="#about">About</a></li>
+              <li class="l-footer__nav-item"><a class="l-footer__nav-link" href="#service">Services</a></li>
+              <li class="l-footer__nav-item"><a class="l-footer__nav-link" href="#gallery">Gallery</a></li>
+              <li class="l-footer__nav-item"><a class="l-footer__nav-link" href="#contact">Contact</a></li>
             </ul><span class="l-footer__copyright">© 2022 Robert Warren</span>
           </nav>
         </div>

@@ -1,9 +1,13 @@
+@charset "utf-8";
 @use "../_base/variables" as *;
 
+// ============================================================
+// Layout: Header
+// ============================================================
 .l-header {
   position: relative;
   color: $color-white;
-  height: 7.40rem;
+  height: 8.36rem;
   background-color: $color-heading;
   background-image: url('../img/common/header_banner.png');
   background-repeat: no-repeat;
@@ -11,7 +15,7 @@
   background-size: cover;
 
   .l-container {
-    width: 1320px;
+    width: $container-width;
     margin: 0 auto;
   }
 }
@@ -20,7 +24,7 @@
   display: flex;
   align-items: center;
   padding: $spacing-lg 0;
-  gap: 4.2rem;
+  gap: 4.44rem;
 }
 
 .l-header__brand {
@@ -50,74 +54,6 @@
   display: flex;
   align-items: center;
   gap: 24px;
-}
-
-.l-navigation__list {
-  display: flex;
-  align-items: center;
-  gap: 24px;
-  margin: 0;
-  padding: 0;
-
-  li {
-    list-style: none;
-  }
-}
-
-.l-navigation_link {
-  color: $color-text-subtle;
-  font-size: $font-size-base;
-  line-height: $spacing-lg;
-  font-weight: 500;
-  text-decoration: none;
-
-  &:hover,
-  &.is-active {
-    color: $color-white;
-  }
-}
-
-.c-button {
-  display: inline-flex;
-  align-items: center;
-  box-sizing: border-box;
-  min-height: 0.48rem;
-  padding: 0 0.32rem;
-  border-radius: 1rem;
-  color: $color-white;
-  text-decoration: none;
-
-  &--primary {
-    background-color: $color-brand;
-    gap: 0.1rem;
-  }
-
-  &--secondary {
-    background-color: $color-brand;
-    color: $color-white;
-    gap: $spacing-sm;
-    width: 1.87rem;
-  }
-
-  &--tertiary {
-    border: 2px solid $color-white;
-    gap: $spacing-sm;
-    // width: 1.87rem;
-  }
-
-  &--quaternary {
-    justify-content: center;
-    // width: 1.73rem;
-    border: 2px solid $color-brand;
-    color: $color-brand;
-    gap: $spacing-sm;
-  }
-
-  &__label {
-    font-size: $font-size-base;
-    line-height: 0.48rem;
-    font-weight: 600;
-  }
 }
 
 .l-header__hero {
@@ -165,6 +101,37 @@
   overflow: hidden;
 }
 
+// ============================================================
+// Layout: Global Navigation
+// ============================================================
+.l-global-nav__list {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+
+  li {
+    list-style: none;
+  }
+}
+
+.l-global-nav__link {
+  color: $color-text-subtle;
+  font-size: $font-size-base;
+  line-height: $spacing-lg;
+  font-weight: 500;
+  text-decoration: none;
+
+  &:hover,
+  &.is-active {
+    color: $color-white;
+  }
+}
+
+// ============================================================
+// Photography list (nằm trong header layout)
+// ============================================================
 .l-photography__list {
   display: flex;
   align-items: flex-start;
@@ -191,10 +158,3 @@
     transform: translateY(-0.64rem);
   }
 }
-
-// .p-section-top-about__button {
-//   display: flex;
-//   gap: ;
-// }
-
-

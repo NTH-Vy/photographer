@@ -3,6 +3,279 @@
 @use "_parts/header";
 @use "_parts/footer";
 
+// ============================================================
+// Component: Button
+// ============================================================
+.c-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  min-height: 0.48rem;
+  padding: 0 0.32rem;
+  border-radius: 1rem;
+  color: $color-white;
+  text-decoration: none;
+  transition: all 0.25s ease;
+
+  &__label {
+    font-size: $font-size-base;
+    line-height: 0.48rem;
+    font-weight: 600;
+  }
+
+  &__icon {
+    width: 24px;
+    height: 24px;
+    transition: filter 0.25s ease;
+  }
+
+  &--primary {
+    background-color: $color-brand;
+    gap: 0.1rem;
+  }
+
+  &--secondary {
+    background-color: $color-brand;
+    color: $color-white;
+    gap: $spacing-sm;
+    width: 1.87rem;
+  }
+
+  &--tertiary {
+    border: 2px solid $color-white;
+    gap: $spacing-sm;
+  }
+
+  &--quaternary {
+    justify-content: center;
+    border: 2px solid $color-brand;
+    color: $color-brand;
+    background-color: $color-white;
+    gap: $spacing-sm;
+
+    &:hover {
+      background-color: $color-brand;
+      color: $color-white;
+
+      .c-button__icon {
+        filter: brightness(0) invert(1);
+      }
+    }
+  }
+
+  &--full {
+    width: 100%;
+  }
+}
+
+// ============================================================
+// Component: Heading
+// ============================================================
+.c-heading {
+  font-weight: 400;
+  margin: 0;
+}
+
+.c-heading--primary {
+  font-size: 0.36rem;
+  line-height: 0.44rem;
+}
+
+// ============================================================
+// Component: Link
+// ============================================================
+.c-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+
+  &--inline {
+    width: 0.48rem;
+    height: 0.48rem;
+    border-radius: 50%;
+    border: 2px solid $color-surface;
+    background-color: $color-white;
+    transition: all 0.25s ease;
+
+    &:hover {
+      background-color: $color-brand;
+      border-color: $color-brand;
+
+      img {
+        filter: brightness(0) invert(1);
+      }
+    }
+  }
+}
+
+// ============================================================
+// Component: Card
+// ============================================================
+.c-card {
+  background-color: $color-white;
+  padding: 48px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+  display: grid;
+  gap: 32px;
+  position: relative;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+
+  &--pricing {
+    max-width: 424px;
+    min-height: 616px;
+
+    &:hover {
+      border-color: $color-brand;
+      cursor: pointer;
+
+      .c-card__divider {
+        background-color: $color-brand;
+      }
+
+      .c-button {
+        background-color: $color-brand;
+        color: $color-white;
+        border-color: $color-brand;
+
+        &__icon {
+          filter: brightness(0) invert(1);
+        }
+      }
+    }
+  }
+}
+
+.c-card__price {
+  display: block;
+  font-size: 0.32rem;
+  line-height: 0.44rem;
+  font-weight: 600;
+  color: $color-brand;
+  transition: color 0.25s ease;
+  margin-bottom: 24px;
+}
+
+.c-card__title {
+  font-size: 0.2rem;
+  line-height: 0.28rem;
+  font-weight: 500;
+  margin: 0 0 12px;
+}
+
+.c-card__subtitle {
+  color: $color-text-muted;
+  font-size: 0.16rem;
+  line-height: 0.24rem;
+  font-weight: 400;
+  margin: 0;
+}
+
+.c-card__divider {
+  border: 0;
+  height: 1px;
+  background-color: $color-divider;
+  width: 100%;
+  transition: background-color 0.25s ease;
+}
+
+.c-card__features {
+  list-style: none;
+  display: grid;
+  gap: 0.16rem;
+  margin: 0;
+  padding: 0;
+}
+
+.c-card__feature-item {
+  font-size: 16px;
+  line-height: 0.24rem;
+  color: $color-heading;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  &::before {
+    content: url("../img/top/pricing_plan_check_circle.svg");
+    display: inline-flex;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+  }
+
+  &--disabled {
+    color: $color-text-subtle;
+    text-decoration: line-through;
+
+    &::before {
+      content: url("../img/top/pricing_plan_check_circle_disabled.svg");
+    }
+  }
+}
+
+// ============================================================
+// Component: Media
+// ============================================================
+.c-media {
+  display: flex;
+  gap: $spacing-lg;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.c-media__item {
+  list-style: none;
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+}
+
+// ============================================================
+// Component: Stat
+// ============================================================
+.c-stat {
+  display: grid;
+  gap: 0.04rem;
+}
+
+.c-stat__value {
+  font-size: $font-size-xl;
+  line-height: $spacing-2xl;
+  font-weight: 600;
+}
+
+.c-stat__label {
+  font-size: $font-size-sm;
+  line-height: 0.2rem;
+  font-weight: 400;
+}
+
+// ============================================================
+// Component: Divider
+// ============================================================
+.c-divider {
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: $color-divider;
+
+  &--spaced {
+    margin-top: 0.15rem;
+  }
+}
+
+// ============================================================
+// Section: About
+// ============================================================
 .p-section-top-about {
   padding: $spacing-3xl $spacing-section;
 }
@@ -40,42 +313,10 @@
   list-style: none;
 }
 
-.p-section-top-about__portrait {
-  display: grid;
-  gap: 0.04rem;
-
-  strong {
-    font-size: $font-size-xl;
-    line-height: $spacing-2xl;
-    font-weight: 600;
-  }
-
-  span {
-    font-size: $font-size-sm;
-    line-height: 0.2rem;
-    font-weight: 400;
-  }
-
-  .c-divider {
-    display: block;
-    width: 100%;
-    height: 1px;
-    margin-top: 0.15rem;
-    background-color: $color-divider;
-  }
-}
-
 .p-section-top-about__content {
   display: grid;
   gap: $spacing-lg;
   width: 480px;
-
-  h2 {
-    font-size: 0.36rem;
-    line-height: 0.44rem;
-    font-weight: 400;
-    margin: 0;
-  }
 
   p {
     font-size: $font-size-base;
@@ -103,23 +344,17 @@
   gap: $spacing-lg;
 }
 
-.p-section-top-about_social-link {
+.p-section-top-about__social-link {
   display: flex;
   gap: 0.08rem;
   margin: 0;
-
-  li {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    list-style: none;
-    width: 0.48rem;
-    height: 0.48rem;
-    border-radius: $spacing-section;
-    border: 2px solid $color-surface;
-  }
+  padding: 0;
+  list-style: none;
 }
 
+// ============================================================
+// Section: Gallery
+// ============================================================
 .p-section-top-gallery {
   padding: $spacing-section;
 }
@@ -133,13 +368,6 @@
 .p-section-top-gallery__title {
   display: grid;
   gap: 0.2rem;
-
-  h2 {
-    font-size: 36px;
-    line-height: 44px;
-    font-weight: 400;
-    margin: 0;
-  }
 
   p {
     font-size: 16px;
@@ -161,209 +389,9 @@
   }
 }
 
-.p-section-top-news {
-  padding: $spacing-section;
-}
-
-.p-section-top-news__body {
-  display: grid;
-  gap: 0.5rem;
-
-  h2 {
-    font-size: 0.36rem;
-    line-height: 0.44rem;
-    font-weight: 400;
-    margin: 0;
-    justify-self: center;
-  }
-}
-
-.p-section-top-news__photo {
-  display: flex;
-  gap: $spacing-lg;
-}
-
-.p-section-top-post {
-  padding: $spacing-section;
-}
-
-.p-section-top-post__body {
-  display: grid;
-  gap: 0.5rem;
-
-  h2 {
-    font-size: 0.36rem;
-    line-height: 0.44rem;
-    font-weight: 400;
-    margin: 0;
-    justify-self: center;
-  }
-}
-
-.p-section-top-post__photo {
-  display: flex;
-  gap: $spacing-lg;
-}
-
-.p-section-top-pricing-plan {
-  background-color: $color-gray;
-  padding: $spacing-section;
-
-  &__body {
-    display: grid;
-    gap: 0.5rem;
-  }
-
-  &__title {
-    font-size: 0.36rem;
-    line-height: 0.44rem;
-    font-weight: 400;
-    margin: 0;
-    justify-self: center;
-  }
-
-  // &__list {
-  //   display: grid;
-  //   grid-template-columns: repeat(3, 1fr);
-  //   gap: 24px;
-  //   text-align: left;
-  // }
-}
-
-.p-section-top-pricing-plan__card {
-  display: flex;
-  gap: 0.24rem;
-}
-
-.pricing-card {
-  background-color: #ffffff;
-  max-width: 424px;
-  min-height: 616px;
-  padding: 48px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
-  display: grid;
-  gap: 32px;
-  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
-  position: relative;
-
-  &__price {
-    display: block;
-    font-size: 0.32rem;
-    line-height: 0.44rem;
-    font-weight: 600;
-    color: $color-brand;
-    transition: color 0.25s ease;
-    margin-bottom: 24px;
-  }
-
-  &__title {
-    font-size: 0.2rem;
-    line-height: 0.28rem;
-    font-weight: 500;
-    margin: 0;
-    margin-bottom: 12px;
-  }
-
-  &__subtitle {
-    color: $color-text-muted;
-    font-size: 0.16rem;
-    line-height: 0.24rem;
-    font-weight: 400;
-    margin: 0;
-  }
-
-  &__divider {
-    border: 0;
-    height: 1px;
-    background-color: #E6E8EB;
-    width: 100%;
-    transition: background-color 0.25s ease;
-  }
-
-  &__features {
-    list-style: none;
-    display: grid;
-    gap: 0.16rem;
-    margin: 0;
-    padding: 0;
-  }
-
-  &__feature-item {
-    font-size: 16px;
-    line-height: 0.24rem;
-    color: $color-heading;
-    font-weight: 400;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-
-    &::before {
-      content: url("../img/top/pricing_plan_check_circle.svg");
-      display: inline-flex;
-      justify-content: center;
-      width: 24px;
-      height: 24px;
-      flex-shrink: 0;
-    }
-
-    &--disabled {
-      color: $color-text-subtle;
-      text-decoration: line-through;
-
-      &::before {
-        content: url("../img/top/pricing_plan_check_circle_disabled.svg");
-      }
-    }
-  }
-
-  &:hover {
-    border-color: $color-brand;
-    cursor: pointer;
-
-    .pricing-card__divider {
-      background-color: $color-brand;
-    }
-
-    .button-common {
-      background-color: $color-brand;
-      color: #ffffff;
-      border-color: $color-brand;
-
-      &__icon {
-        filter: brightness(0) invert(1);
-      }
-    }
-  }
-}
-
-.button-common {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.12rem;
-  width: 100%;
-  height: 0.48rem;
-  padding: 0 0.32rem;
-  border: 2px solid $color-brand;
-  border-radius: 100px;
-  text-decoration: none;
-  background-color: #ffffff;
-  color: $color-brand;
-  transition: all 0.25s ease;
-
-  &__text {
-    font-size: 0.16rem;
-    font-weight: 600;
-    line-height: 0.48rem;
-  }
-
-  &__icon {
-    width: 24px;
-    height: 24px;
-    transition: filter 0.25s ease;
-  }
-}
-
+// ============================================================
+// Section: Service
+// ============================================================
 .p-section-top-service {
   padding: $spacing-section;
 }
@@ -373,19 +401,11 @@
   gap: 0.2rem;
   width: 424px;
 
-  h2 {
-    font-size: 0.36rem;
-    line-height: 0.44rem;
-    font-weight: 400;
-    margin: 0;
-  }
-
   p {
     font-size: 0.16rem;
     line-height: 0.24rem;
     font-weight: 400;
-    margin: 0;
-    margin-bottom: 50px;
+    margin: 0 0 50px;
   }
 }
 
@@ -438,6 +458,108 @@
   gap: 0.24rem;
 }
 
+// ============================================================
+// Section: Pricing Plan
+// ============================================================
+.p-section-top-pricing-plan {
+  background-color: $color-gray;
+  padding: $spacing-section;
+
+  &__body {
+    display: grid;
+    gap: 0.5rem;
+  }
+
+  &__title {
+    justify-self: center;
+  }
+
+  &__card {
+    display: flex;
+    gap: 0.24rem;
+  }
+}
+
+// ============================================================
+// Sections: News & Post
+// ============================================================
+.p-section-top-news,
+.p-section-top-post {
+  padding: $spacing-section;
+}
+
+.p-section-top-news__overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding: 32px;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0.95) 100%);
+  color: $color-white;
+  text-align: left;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+.p-section-top-news .c-media__item {
+  position: relative;
+
+  &:hover .p-section-top-news__overlay {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.p-section-top-news__overlay--span {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 8px;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 14px;
+}
+
+.p-section-top-news__overlay--title {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.p-section-top-post .c-media__item {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    inset: 0;
+    background: url("../img/top/post_picture_hover.png") center / cover no-repeat;
+    content: "";
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s ease;
+  }
+
+  &:hover::after {
+    opacity: 1;
+  }
+}
+
+.p-section-top-news__body,
+.p-section-top-post__body {
+  display: grid;
+  gap: 0.5rem;
+
+  h2 {
+    justify-self: center;
+  }
+}
+
+// ============================================================
+// Section: Contact
+// ============================================================
 .p-section-top-contact {
   padding: 80px 0;
   background-color: #ffffff;
@@ -454,7 +576,6 @@
     }
   }
 
-  // Cột trái
   &__information {
     flex: 0 0 42%;
     max-width: 42%;
@@ -504,7 +625,7 @@
     width: 56px;
     height: 56px;
     border-radius: 50%;
-    background-color: #e9f6ec;
+    background-color: $color-surface;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -530,13 +651,12 @@
     transition: color 0.2s;
 
     &:hover {
-      color: #27ae60;
+      color: $color-brand;
     }
   }
 
-  // Khối Social Media
   &__social {
-    background-color: #e9f6ec;
+    background-color: $color-surface;
     padding: 28px 32px;
     border-radius: 4px;
   }
@@ -557,7 +677,7 @@
   &__social-line {
     width: 24px;
     height: 2px;
-    background-color: #27ae60;
+    background-color: $color-brand;
     flex-shrink: 0;
   }
 
@@ -571,28 +691,6 @@
     flex-wrap: wrap;
   }
 
-  &__social-link {
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    background-color: #ffffff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.25s ease;
-
-    &.is-active,
-    &:hover {
-      background-color: #27ae60;
-
-      // Đổi màu icon sang trắng nếu dùng SVG đen/xanh (tuỳ chọn)
-      img {
-        filter: brightness(0) invert(1);
-      }
-    }
-  }
-
-  // Đường kẻ dọc giữa
   &__divider {
     width: 1px;
     background-color: #e5e7eb;
@@ -604,7 +702,6 @@
     }
   }
 
-  // Cột phải: Form
   &__form-wrap {
     flex: 1;
   }
@@ -659,7 +756,7 @@
     }
 
     &:focus {
-      border-color: #27ae60;
+      border-color: $color-brand;
     }
   }
 
@@ -695,7 +792,7 @@
     align-self: flex-start;
     margin-top: 8px;
     padding: 15px 32px;
-    background-color: #27ae60;
+    background-color: $color-brand;
     color: #ffffff;
     font-size: 15px;
     font-weight: 600;
@@ -708,9 +805,8 @@
     transition: background-color 0.25s ease, transform 0.2s ease;
 
     &:hover {
-      background-color: #219653;
+      background-color: darken($color-brand, 10%);
       transform: translateY(-1px);
     }
   }
 }
-

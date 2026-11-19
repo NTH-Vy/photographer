@@ -5,11 +5,11 @@
   background-color: $color-gray;
   position: relative;
   color: $color-white;
-  height: 1.28rem;
+  height: $footer-height;
   padding: 0.4rem;
 
   .l-container {
-    width: 1320px;
+    width: $container-width;
     margin: 0 auto;
   }
 }
@@ -42,12 +42,18 @@
   }
 }
 
-.l-navigation__list-footer {
+.l-footer__nav-list {
   display: flex;
   gap: $spacing-lg;
+  margin: 0;
+  padding: 0;
+
+  li {
+    list-style: none;
+  }
 }
 
-.l-navigation_link-footer {
+.l-footer__nav-link {
   color: $color-text-muted;
   font-size: $font-size-base;
   line-height: $spacing-lg;

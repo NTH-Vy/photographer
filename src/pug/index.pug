@@ -1,17 +1,3 @@
-//- extends ./_layouts/default
-//- block vars
-//-   -path = "."
-//-   -pageID = "top"
-//-   -pageTitle = "sample title"
-//-   -pageDescription = "sample description"
-//-   -pageKeywords = ""
-//-   -imgPC = path+"/img/top/"
-//-   -imgSP = path+"/img/top/sp/"
-//-   -imgCommonPC = path+"/img/common/"
-//-   -imgCommonSP = path+"/img/common/sp/"
-//- block container
-
-
 extends ./_layouts/default
 block vars
   -path = "."
@@ -23,11 +9,6 @@ block vars
   -imgSP = path+"/img/top/sp/"
   -imgCommonPC = path+"/img/common/"
   -imgCommonSP = path+"/img/common/sp/"
-//- block container
-//-   section.l-hero
-//-     h1 WINSTON POTTER
-//-     p Professional Lawyer
-
 
 block container
   .l-header__photography
@@ -45,26 +26,29 @@ block container
       li.l-photography__item
         img(src=path+"/img/top/header_picture_06.png" alt="Header Picture 06" width="312" height="424" loading="eager")
 
+  // ============================================================
+  // Section: About
+  // ============================================================
   section#home.p-section-top-about
     .l-container
       .p-section-top-about__wrapper
         .p-section-top-about__photo
           ul.p-section-top-about__stats
-            li.p-section-top-about__portrait
-              strong 26+
-              span Years of experience
-              .c-divider
-            li.p-section-top-about__portrait
-              strong 98.5%
-              span Client Satisfaction
-              .c-divider
-            li.p-section-top-about__portrait
-              strong 2149+
-              span Beautiful Photo
-              .c-divider
-            li.p-section-top-about__portrait
-              strong 17+
-              span Awards
+            li.c-stat
+              strong.c-stat__value 26+
+              span.c-stat__label Years of experience
+              .c-divider.c-divider--spaced
+            li.c-stat
+              strong.c-stat__value 98.5%
+              span.c-stat__label Client Satisfaction
+              .c-divider.c-divider--spaced
+            li.c-stat
+              strong.c-stat__value 2149+
+              span.c-stat__label Beautiful Photo
+              .c-divider.c-divider--spaced
+            li.c-stat
+              strong.c-stat__value 17+
+              span.c-stat__label Awards
 
           img(src=path+"/img/top/about_picture_robert_warren.png" alt="Robert Warren" width="648" height="464" loading="lazy")
 
@@ -73,30 +57,38 @@ block container
             span 📸 Photographer
             span 📖 Writer
             span ✈️ Traveler
-          h2.p-section-top-about__title My name is Robert Warren. I’m a professional photographer for almost 26+ years.
+          h2.p-section-top-about__title.c-heading.c-heading--primary My name is Robert Warren. I’m a professional photographer for almost 26+ years.
           p.p-section-top-about__text Nullam ligula nulla, mollis sed leo sit amet, gravida faucibus ligula. Aliquam bibendum, sapien vel placerat euismod, sem eros congue neque, eget dapibus felis ligula ac nibh. In eget erat purus. Maecenas porta metus nec porttitor gravida. Fusce quis faucibus nisi, sit amet dictum ipsum. Nunc eu lorem at libero congue dictum nam et nunc tincidunt, mollis sapien.
           .p-section-top-about__button
             a(href="#").c-button.c-button--secondary
               img.c-button__icon(src=path+"/img/common/header_icn_chat_centered_dots.svg" alt="Get in touch" width="24" height="24" loading="eager")
-              span Get in touch
-            ul.p-section-top-about_social-link
-              li.c-link.c-link--inline
-                img(src=path+"/img/top/about_icn_facebook.svg" alt="Facebook" width="16" height="16" loading="lazy")
-              li.c-link.c-link--inline
-                img(src=path+"/img/top/about_icn_twitter.svg" alt="Twitter" width="16" height="16" loading="lazy")
-              li.c-link.c-link--inline
-                img(src=path+"/img/top/about_icn_linked.svg" alt="Linked" width="16" height="16" loading="lazy")
-              li.c-link.c-link--inline
-                img(src=path+"/img/top/about_icn_instagram.svg", alt="Instagram", width="16", height="16", loading="lazy")
-              li.c-link.c-link--inline
-                img(src=path+"/img/top/about_icn_unsplash.svg", alt="Unsplash", width="16", height="16", loading="lazy")
+              span.c-button__label Get in touch
+            ul.p-section-top-about__social-link
+              li
+                a.c-link.c-link--inline(href="#" aria-label="Facebook")
+                  img(src=path+"/img/top/about_icn_facebook.svg" alt="Facebook" width="16" height="16" loading="lazy")
+              li
+                a.c-link.c-link--inline(href="#" aria-label="Twitter")
+                  img(src=path+"/img/top/about_icn_twitter.svg" alt="Twitter" width="16" height="16" loading="lazy")
+              li
+                a.c-link.c-link--inline(href="#" aria-label="Linked")
+                  img(src=path+"/img/top/about_icn_linked.svg" alt="Linked" width="16" height="16" loading="lazy")
+              li
+                a.c-link.c-link--inline(href="#" aria-label="Instagram")
+                  img(src=path+"/img/top/about_icn_instagram.svg" alt="Instagram" width="16" height="16" loading="lazy")
+              li
+                a.c-link.c-link--inline(href="#" aria-label="Unsplash")
+                  img(src=path+"/img/top/about_icn_unsplash.svg" alt="Unsplash" width="16" height="16" loading="lazy")
 
-  section.p-section-top-gallery
+  // ============================================================
+  // Section: Gallery
+  // ============================================================
+  section#gallery.p-section-top-gallery
     .l-container
       .p-section-top-gallery__body
         .p-section-top-gallery__heading
           .p-section-top-gallery__title
-            h2 My Gallery
+            h2.c-heading.c-heading--primary My Gallery
             p Nullam ligula nulla, mollis sed leo sit amet, gravida faucibus ligula. Aliquam bibendum, sapien vel placerat.
           a.c-button.c-button--quaternary(href="#")
             span.c-button__label View more
@@ -116,10 +108,13 @@ block container
             img(src=path+"/img/top/gallery_photo_right_03.png" alt="Gallery Photo Right 03" width="312" height="228" loading="lazy")
             img(src=path+"/img/top/gallery_photo_right_04.png" alt="Gallery Photo Right 04" width="312" height="228" loading="lazy")
 
-  section.p-section-top-service
+  // ============================================================
+  // Section: Service
+  // ============================================================
+  section#service.p-section-top-service
     .l-container
       .p-section-top-service__heading
-        h2 My Services
+        h2.c-heading.c-heading--primary My Services
         p Nullam ligula nulla, mollis sed leo sit amet, gravida faucibus ligula. Aliquam bibendum, sapien vel placerat.
       .p-section-top-service__body
         .p-section-top-service__card
@@ -146,173 +141,211 @@ block container
           img(src=path+"/img/top/service_picture_02.png" alt="Service Picture 02" width="312" height="504" loading="lazy")
           img(src=path+"/img/top/service_picture_03.png" alt="Service Picture 03" width="312" height="504" loading="lazy")
 
-  section.p-section-top-pricing-plan
+  // ============================================================
+  // Section: Pricing Plan
+  // ============================================================
+  section#pricing_plan.p-section-top-pricing-plan
     .l-container
       .p-section-top-pricing-plan__body
-        h2.p-section-top-pricing-plan__title Pricing Plans
+        h2.p-section-top-pricing-plan__title.c-heading.c-heading--primary Pricing Plans
         .p-section-top-pricing-plan__card
-          .pricing-card
-            .pricing-card__header
-              strong.pricing-card__price $625
-              h3.pricing-card__title Standard
-              p.pricing-card__subtitle In mi ex, rutrum sed dui et, dignissim tempor leo. Maecenas vulputate, arcu eget condin.
 
-            hr.pricing-card__divider
+          article.c-card.c-card--pricing
+            .c-card__header
+              strong.c-card__price $625
+              h3.c-card__title Standard
+              p.c-card__subtitle In mi ex, rutrum sed dui et, dignissim tempor leo. Maecenas vulputate, arcu eget condin.
 
-            ul.pricing-card__features
-              li.pricing-card__feature-item 2 Hours
-              li.pricing-card__feature-item 1 Photographer
-              li.pricing-card__feature-item.pricing-card__feature-item--disabled Special Photo Edits
-              li.pricing-card__feature-item.pricing-card__feature-item--disabled Wedding, Events &amp; Festivals
-              li.pricing-card__feature-item.pricing-card__feature-item--disabled Engagement Shoot
-              li.pricing-card__feature-item.pricing-card__feature-item--disabled Ceremony Video
+            hr.c-card__divider
 
-            a.pricing-card__button.button-common(href="#")
-              span.button-common__text Let’s Work Together
-              img.button-common__icon(src=path+"/img/top/gallery_icn_arrow_right.svg" alt="Let’s Work Together" width="24" height="24" loading="lazy")
+            ul.c-card__features
+              li.c-card__feature-item 2 Hours
+              li.c-card__feature-item 1 Photographer
+              li.c-card__feature-item.c-card__feature-item--disabled Special Photo Edits
+              li.c-card__feature-item.c-card__feature-item--disabled Wedding, Events &amp; Festivals
+              li.c-card__feature-item.c-card__feature-item--disabled Engagement Shoot
+              li.c-card__feature-item.c-card__feature-item--disabled Ceremony Video
 
-          .pricing-card
-            .pricing-card__header
-              strong.pricing-card__price $1,600
-              h3.pricing-card__title Premium
-              p.pricing-card__subtitle In mi ex, rutrum sed dui et, dignissim tempor leo. Maecenas vulputate, arcu eget condin.
+            a.c-button.c-button--quaternary.c-button--full(href="#")
+              span.c-button__label Let’s Work Together
+              img.c-button__icon(src=path+"/img/top/gallery_icn_arrow_right.svg" alt="Let’s Work Together" width="24" height="24" loading="lazy")
 
-            hr.pricing-card__divider
+          article.c-card.c-card--pricing
+            .c-card__header
+              strong.c-card__price $1,600
+              h3.c-card__title Premium
+              p.c-card__subtitle In mi ex, rutrum sed dui et, dignissim tempor leo. Maecenas vulputate, arcu eget condin.
 
-            ul.pricing-card__features
-              li.pricing-card__feature-item 4 Hours
-              li.pricing-card__feature-item 1 Photographer
-              li.pricing-card__feature-item Special Photo Edits
-              li.pricing-card__feature-item Wedding, Events &amp; Festivals
-              li.pricing-card__feature-item.pricing-card__feature-item--disabled Engagement Shoot
-              li.pricing-card__feature-item.pricing-card__feature-item--disabled Ceremony Video
+            hr.c-card__divider
 
-            a.pricing-card__button.button-common(href="#")
-              span.button-common__text Let’s Work Together
-              img.button-common__icon(src=path+"/img/top/gallery_icn_arrow_right.svg" alt="Let’s Work Together" width="24" height="24" loading="lazy")
+            ul.c-card__features
+              li.c-card__feature-item 4 Hours
+              li.c-card__feature-item 1 Photographer
+              li.c-card__feature-item Special Photo Edits
+              li.c-card__feature-item Wedding, Events &amp; Festivals
+              li.c-card__feature-item.c-card__feature-item--disabled Engagement Shoot
+              li.c-card__feature-item.c-card__feature-item--disabled Ceremony Video
 
-          .pricing-card
-            .pricing-card__header
-              strong.pricing-card__price $3,650
-              h3.pricing-card__title Business
-              p.pricing-card__subtitle In mi ex, rutrum sed dui et, dignissim tempor leo. Maecenas vulputate, arcu eget condin.
+            a.c-button.c-button--quaternary.c-button--full(href="#")
+              span.c-button__label Let’s Work Together
+              img.c-button__icon(src=path+"/img/top/gallery_icn_arrow_right.svg" alt="Let’s Work Together" width="24" height="24" loading="lazy")
 
-            hr.pricing-card__divider
+          article.c-card.c-card--pricing
+            .c-card__header
+              strong.c-card__price $3,650
+              h3.c-card__title Business
+              p.c-card__subtitle In mi ex, rutrum sed dui et, dignissim tempor leo. Maecenas vulputate, arcu eget condin.
 
-            ul.pricing-card__features
-              li.pricing-card__feature-item 6+ Hours
-              li.pricing-card__feature-item 2 Photographer
-              li.pricing-card__feature-item Special Photo Edits
-              li.pricing-card__feature-item Wedding, Events &amp; Festivals
-              li.pricing-card__feature-item Engagement Shoot
-              li.pricing-card__feature-item Ceremony Video
+            hr.c-card__divider
 
-            a.pricing-card__button.button-common(href="#")
-              span.button-common__text Let’s Work Together
-              img.button-common__icon(src=path+"/img/top/gallery_icn_arrow_right.svg" alt="Let’s Work Together" width="24" height="24" loading="lazy")
+            ul.c-card__features
+              li.c-card__feature-item 6+ Hours
+              li.c-card__feature-item 2 Photographer
+              li.c-card__feature-item Special Photo Edits
+              li.c-card__feature-item Wedding, Events &amp; Festivals
+              li.c-card__feature-item Engagement Shoot
+              li.c-card__feature-item Ceremony Video
 
+            a.c-button.c-button--quaternary.c-button--full(href="#")
+              span.c-button__label Let’s Work Together
+              img.c-button__icon(src=path+"/img/top/gallery_icn_arrow_right.svg" alt="Let’s Work Together" width="24" height="24" loading="lazy")
 
-  section.p-section-top-news
+  // ============================================================
+  // Section: News
+  // ============================================================
+  section#blog.p-section-top-news
     .l-container
-      .p-section-top-post__body
-        h2.p-section-top-post__title Blog & News
-        .p-section-top-news__photo
-          img(src=path+"/img/top/news_picture_01.png" alt="News Picture 01" width="424" height="424" loading="lazy")
-          img(src=path+"/img/top/news_picture_02.png" alt="News Picture 02" width="424" height="424" loading="lazy")
-          img(src=path+"/img/top/news_picture_03.png" alt="News Picture 03" width="424" height="424" loading="lazy")
+      .p-section-top-news__body
+        h2.p-section-top-news__title.c-heading.c-heading--primary Blog &amp; News
+        ul.c-media
+          li.c-media__item
+            img(src=path+"/img/top/news_picture_01.png" alt="News Picture 01" width="424" height="424" loading="lazy")
+            .p-section-top-news__overlay
+              .p-section-top-news__overlay--span
+                span 22 Oct, 2020
+                span /
+                span 246 Comments
+              h3.p-section-top-news__overlay--title Duis magna risus, convallis vel purus eu, sollicitudin volutpat vel.
+          li.c-media__item
+            img(src=path+"/img/top/news_picture_02.png" alt="News Picture 02" width="424" height="424" loading="lazy")
+            .p-section-top-news__overlay
+              .p-section-top-news__overlay--span
+                span 22 Oct, 2020
+                span /
+                span 246 Comments
+              h3.p-section-top-news__overlay--title Duis magna risus, convallis vel purus eu, sollicitudin volutpat vel.
 
+          li.c-media__item
+            img(src=path+"/img/top/news_picture_03.png" alt="News Picture 03" width="424" height="424" loading="lazy")
+            .p-section-top-news__overlay
+              .p-section-top-news__overlay--span
+                span 22 Oct, 2020
+                span /
+                span 246 Comments
+              h3.p-section-top-news__overlay--title Duis magna risus, convallis vel purus eu, sollicitudin volutpat vel.
+
+  // ============================================================
+  // Section: Latest Instagram Post
+  // ============================================================
   section.p-section-top-post
     .l-container
       .p-section-top-post__body
-        h2.p-section-top-post__title Latest instagram post
-        .p-section-top-post__photo
-          img(src=path+"/img/top/post_picture_01.png" alt="Post Picture 01" width="200" height="200" loading="lazy")
-          img(src=path+"/img/top/post_picture_02.png" alt="Post Picture 02" width="200" height="200" loading="lazy")
-          img(src=path+"/img/top/post_picture_03.png" alt="Post Picture 03" width="200" height="200" loading="lazy")
-          img(src=path+"/img/top/post_picture_04.png" alt="Post Picture 04" width="200" height="200" loading="lazy")
-          img(src=path+"/img/top/post_picture_05.png" alt="Post Picture 05" width="200" height="200" loading="lazy")
-          img(src=path+"/img/top/post_picture_06.png" alt="Post Picture 06" width="200" height="200" loading="lazy")
+        h2.p-section-top-post__title.c-heading.c-heading--primary Latest instagram post
+        ul.c-media
+          li.c-media__item
+            img(src=path+"/img/top/post_picture_01.png" alt="Post Picture 01" width="200" height="200" loading="lazy")
+          li.c-media__item
+            img(src=path+"/img/top/post_picture_02.png" alt="Post Picture 02" width="200" height="200" loading="lazy")
+          li.c-media__item
+            img(src=path+"/img/top/post_picture_03.png" alt="Post Picture 03" width="200" height="200" loading="lazy")
+          li.c-media__item
+            img(src=path+"/img/top/post_picture_04.png" alt="Post Picture 04" width="200" height="200" loading="lazy")
+          li.c-media__item
+            img(src=path+"/img/top/post_picture_05.png" alt="Post Picture 05" width="200" height="200" loading="lazy")
+          li.c-media__item
+            img(src=path+"/img/top/post_picture_06.png" alt="Post Picture 06" width="200" height="200" loading="lazy")
 
-section.p-section-top-contact
-  .l-container
-    .p-section-top-contact__body
-      .p-section-top-contact__information
-        .p-section-top-contact__heading
-          h2 Have a project or question in mind? Just send me a message.
-          p Do you fancy saying hi to me or do you want to get started with your project and you need my help? Feel free to contact me. I will reply within 48 hours.
+  // ============================================================
+  // Section: Contact
+  // ============================================================
+  section#contact.p-section-top-contact
+    .l-container
+      .p-section-top-contact__body
+        .p-section-top-contact__information
+          .p-section-top-contact__heading
+            h2 Have a project or question in mind? Just send me a message.
+            p Do you fancy saying hi to me or do you want to get started with your project and you need my help? Feel free to contact me. I will reply within 48 hours.
 
-        ul.p-section-top-contact__detail
-          li.p-section-top-contact__item
-            figure.p-section-top-contact__icon
-              img(src=path+"/img/top/contact_icn_phone_call.svg" alt="" width="24" height="24" loading="lazy")
-            .p-section-top-contact__content
-              span.p-section-top-contact__label Call me now
-              a.p-section-top-contact__value(href="tel:+12025550190") +1-202-555-0190
-          li.p-section-top-contact__item
-            figure.p-section-top-contact__icon
-              img(src=path+"/img/top/contact_icn_envelope.svg" alt="" width="24" height="24" loading="lazy")
-            .p-section-top-contact__content
-              span.p-section-top-contact__label Chat with me
-              a.p-section-top-contact__value(href="mailto:kevin.gilbert@gmail.com") kevin.gilbert@gmail.com
+          ul.p-section-top-contact__detail
+            li.p-section-top-contact__item
+              figure.p-section-top-contact__icon
+                img(src=path+"/img/top/contact_icn_phone_call.svg" alt="" width="24" height="24" loading="lazy")
+              .p-section-top-contact__content
+                span.p-section-top-contact__label Call me now
+                a.p-section-top-contact__value(href="tel:+12025550190") +1-202-555-0190
+            li.p-section-top-contact__item
+              figure.p-section-top-contact__icon
+                img(src=path+"/img/top/contact_icn_envelope.svg" alt="" width="24" height="24" loading="lazy")
+              .p-section-top-contact__content
+                span.p-section-top-contact__label Chat with me
+                a.p-section-top-contact__value(href="mailto:kevin.gilbert@gmail.com") kevin.gilbert@gmail.com
 
-        .p-section-top-contact__social
-          p.p-section-top-contact__social-title
-          .p-section-top-contact__social-list
-            span.p-section-top-contact__social-line
-            ul.p-section-top-contact__social-items
-              li
-                a.p-section-top-contact__social-link(href="#" aria-label="Facebook")
-                  img(src="" alt="" width="20" height="20")
-              li
-                a.p-section-top-contact__social-link(href="#" aria-label="Twitter")
-                  img(src="" alt="" width="20" height="20")
-              li
-                a.p-section-top-contact__social-link.is-active(href="#" aria-label="LinkedIn")
-                  img(src="" alt="" width="20" height="20")
-              li
-                a.p-section-top-contact__social-link(href="#" aria-label="Instagram")
-                  img(src="" alt="" width="20" height="20")
-              li
-                a.p-section-top-contact__social-link(href="#" aria-label="Dribbble")
-                  img(src="" alt="" width="20" height="20")
+          .p-section-top-contact__social
+            p.p-section-top-contact__social-title
+            .p-section-top-contact__social-list
+              span.p-section-top-contact__social-line
+              ul.p-section-top-contact__social-items
+                li
+                  a.c-link.c-link--inline(href="#" aria-label="Facebook")
+                    img(src=path+"/img/top/about_icn_facebook.svg" alt="Facebook" width="16" height="16" loading="lazy")
+                li
+                  a.c-link.c-link--inline(href="#" aria-label="Twitter")
+                    img(src=path+"/img/top/about_icn_twitter.svg" alt="Twitter" width="16" height="16" loading="lazy")
+                li
+                  a.c-link.c-link--inline.is-active(href="#" aria-label="LinkedIn")
+                    img(src=path+"/img/top/about_icn_linked.svg" alt="Linked" width="16" height="16" loading="lazy")
+                li
+                  a.c-link.c-link--inline(href="#" aria-label="Instagram")
+                    img(src=path+"/img/top/about_icn_instagram.svg" alt="Instagram" width="16" height="16" loading="lazy")
+                li
+                  a.c-link.c-link--inline(href="#" aria-label="Unsplash")
+                    img(src=path+"/img/top/about_icn_unsplash.svg" alt="Unsplash" width="16" height="16" loading="lazy")
 
-      .p-section-top-contact__divider
+        .p-section-top-contact__divider
 
-      .p-section-top-contact__form-wrap
-        h3.p-section-top-contact__form-title
-          | Just say
-          img(src="" alt="👋" width="24" height="24")
-          |  Hi
+        .p-section-top-contact__form-wrap
+          h3.p-section-top-contact__form-title
+            | Just say
+            img(src=path+"/img/top/contact_icn_hi.svg" alt="Just say Hi" width="24" height="24")
+            |  Hi
 
-        form.p-section-top-contact__form(action="#" method="post")
-          .p-section-top-contact__form-row
+          form.p-section-top-contact__form(action="#" method="post")
+            .p-section-top-contact__form-row
+              .p-section-top-contact__field
+                input.p-section-top-contact__input(type="text" name="name" placeholder="Full Name" required)
+              .p-section-top-contact__field
+                input.p-section-top-contact__input(type="email" name="email" placeholder="Email Adress" required)
+
             .p-section-top-contact__field
-              input.p-section-top-contact__input(type="text" name="name" placeholder="Full Name" required)
+              input.p-section-top-contact__input(type="text" name="subject" placeholder="Subject")
+
+            .p-section-top-contact__form-row
+              .p-section-top-contact__field.is-select
+                select.p-section-top-contact__select(name="plan")
+                  option(value="" disabled selected) Pricing Plans
+                  option(value="basic") Basic Plan
+                  option(value="pro") Pro Plan
+                span.p-section-top-contact__field-icon
+                  img(src=path+"/img/top/contact_icn_caret_down.svg" alt="Plan" width="16" height="16")
+
+              .p-section-top-contact__field.is-date
+                input.p-section-top-contact__input(type="text" name="date" placeholder="Date" onfocus="(this.type='date')" onblur="(this.type='text')")
+                span.p-section-top-contact__field-icon
+                  img(src=path+"/img/top/contact_calendar_blank.svg" alt="Date" width="24" height="24")
+
             .p-section-top-contact__field
-              input.p-section-top-contact__input(type="email" name="email" placeholder="Email Adress" required)
+              textarea.p-section-top-contact__textarea(name="message" rows="5" placeholder="Message")
 
-          .p-section-top-contact__field
-            input.p-section-top-contact__input(type="text" name="subject" placeholder="Subject")
-
-          .p-section-top-contact__form-row
-            .p-section-top-contact__field.is-select
-              select.p-section-top-contact__select(name="plan")
-                option(value="" disabled selected) Pricing Plans
-                option(value="basic") Basic Plan
-                option(value="pro") Pro Plan
-              span.p-section-top-contact__field-icon
-                img(src="" alt="" width="16" height="16")
-
-            .p-section-top-contact__field.is-date
-              input.p-section-top-contact__input(type="text" name="date" placeholder="Date" onfocus="(this.type='date')" onblur="(this.type='text')")
-              span.p-section-top-contact__field-icon
-                img(src="" alt="" width="18" height="18")
-
-          .p-section-top-contact__field
-            textarea.p-section-top-contact__textarea(name="message" rows="5" placeholder="Message")
-
-          button.p-section-top-contact__submit(type="submit")
-            span Send Message
-            img(src="" alt="" width="20" height="20")
-
-
+            button.p-section-top-contact__submit(type="submit")
+              span Send Message
+              img(src=path+"/img/top/contact_icn_paper_plane_right.svg" alt="Send Message" width="24" height="24")
